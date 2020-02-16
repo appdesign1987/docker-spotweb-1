@@ -11,6 +11,7 @@ ln -s /config/ownsettings.php /var/www/spotweb/ownsettings.php
 #rewrite htaccess
 rm -f /var/www/spotweb/.htaccess
 cp /config/.htaccess /var/www/spotweb/.htaccess
+chown www-data:www-data /var/www/spotweb/.htaccess
 
 chown -R www-data:www-data /var/www/spotweb
 

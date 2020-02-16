@@ -8,6 +8,10 @@ touch /config/ownsettings.php && chown www-data:www-data /config/ownsettings.php
 rm -f /var/www/spotweb/ownsettings.php
 ln -s /config/ownsettings.php /var/www/spotweb/ownsettings.php
 
+#rewrite htaccess
+rm -f /var/www/spotweb/.htaccess
+cp /config/.htaccess /var/www/spotweb/.htaccess
+
 chown -R www-data:www-data /var/www/spotweb
 
 if [[ -n "$SPOTWEB_DB_TYPE" && -n "$SPOTWEB_DB_HOST" && -n "$SPOTWEB_DB_NAME" && -n "$SPOTWEB_DB_USER" && -n "$SPOTWEB_DB_PASS" ]]; then
